@@ -27,9 +27,9 @@ async function runExample() {
     await db.del('user:3');
 
     // 削除されたデータの確認
-    try {
-      await db.get('user:3');
-    } catch (error) {
+    // level 10 では存在しないキーは例外ではなく undefined が返る
+    const user3 = await db.get('user:3');
+    if (user3 === undefined) {
       console.log('User 3 does not exist');
     }
   } catch (error) {
