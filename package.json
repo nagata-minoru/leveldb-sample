@@ -1,7 +1,7 @@
 {
   "name": "leveldb-sample",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.cjs",
   "scripts": {
     "test": "node --test"
   },
